@@ -7,6 +7,12 @@ spring:
         url: http://localhost:7779
   application:
     name: myshop-web
+  rabbitmq:
+    host: 192.168.221.131 # rabbitmq所在虚机地址
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
 eureka:
   client:
     register-with-eureka: true # 作为客户端需要注册到Eureka

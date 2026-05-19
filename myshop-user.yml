@@ -5,12 +5,19 @@ spring:
     name: myshop-user
   datasource:
     url: jdbc:mysql://192.168.221.131:3307/springcloud?characterEncoding=UTF8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
   jpa:
     show-sql: true
     generate-ddl: true
     database: mysql
+  rabbitmq:
+    host: 192.168.221.131 # rabbitmq所在虚机地址
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
 eureka:
   client:
     register-with-eureka: true # 作为客户端需要注册到Eureka
